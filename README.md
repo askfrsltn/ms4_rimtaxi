@@ -14,8 +14,8 @@ Table of Contents:
 ------
 
 ## 1. **INTROUDUCTION**
-The web aplication was created as Milestone 4 project during Full Stack Development course by Code Institue to demonstrate Python/Django,JavaScript/HTML/CSS skills acquired during the course.
-The application was built based in existing website for the taxi company RIM-TOURS operating in Italy and Rome. 
+The web aplication was created as a Milestone 4 project during Full Stack Development course by Code Institue to demonstrate Python/Django/JavaScript/HTML/CSS skills acquired during the course.
+The application was built based on existing website for the taxi company "[RIM-TOURS](https://rim-taxi.com/en/)" operating in Italy and Rome. 
 The application has authentication functionality (Register/ Login) and commercial comonent based on Stripe online payment platform.
 * Link to the Application: [Name](url)
 * Step-By-Step development process (XXX steps) is here:[Name](url):

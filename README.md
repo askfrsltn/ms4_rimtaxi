@@ -1,108 +1,177 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome USER_NAME,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+# MS4 - commercial website for taxi ompany - Rim-Tours.
+![am_i_responsive](url)
 
 ---
 
-Happy coding!
+Table of Contents:
+1. [INTROUDUCTION](url)
+2. [USER EXPERIENCE (UX) ](url)
+3. [TESTING](url)
+4. [DEPLOYMENT](url)
+5. [CREDITS](url)
+6. [DISCLAIMER](url)
+
+------
+
+## 1. **INTROUDUCTION**
+The web aplication was created as Milestone 4 project during Full Stack Development course by Code Institue to demonstrate Python/Django,JavaScript/HTML/CSS skills acquired during the course.
+The application was built based in existing website for the taxi company RIM-TOURS operating in Italy and Rome. 
+The application has authentication functionality (Register/ Login) and commercial comonent based on Stripe online payment platform.
+* Link to the Application: [Name](url)
+* Step-By-Step development process (XXX steps) is here:[Name](url):
+* testing process description is here: [Name](url):
+#
+## 2. **USER EXPERIENCE (UX)**
+### **GOALS**
+### **USER STORIES**
+### **DESIGN PROCESS**
+1. STRATEGY
+2. SCOPE
+3. STRUCTURE
+4. SKELETON
+5. SURFACE
+
+### **FEATURES**
+### **Features implemented**
+
+### **Features Not implemented:**
+### **TECHNOLOGIES**
+  * **Languages**
+    - _HTML_ - Hyperlinked markup language, to develop the fornt end pages.
+    - _CSS_ - cascading style sheets to decorate html webpages, I used basic decoration with litle attention to design, focusing on functionality
+    - _Javascript_ - programming language for interactive experienc, in this project I used it only for certain front-end features.
+    - _Python_ - programming language to Create, Read, Update and Delete data on the Mongo DB 
+  * **Libraries**
+    - Django_ - python framework for comercial sites forntend application, falsk helps to reduce amount of html development and use  python with html.
+    - _Bootstap_  - css library with common wed elements - used to save time on developing buttons, navbars, sidebars, and website responsiveness
+    - _FontAwesome_ - icons collection - used for UX design.
+    - _JQuery_ - simplified JavaScript library - to reduce amount of js coding.
+    - _Stripe_ -
+    - _Postgres_
+    - _AWS_
+  * **Tools**
+    - _GitPod_ - clud based edi pogramming environment
+    - _GitHub_ - cloud based development repository - this project is saved on askfrsltn profile.
+    - _CLI_ - command line interface used to 
+    - _Heroku_- it is clud based platform to build, and run web applications, in this project used to deploy the application to the web  
+    - _MS Powerpoint_- was used to build visual structure, flow, data schema, and wireframes.  
+    - _GoogleDrive_- used to store the wireframe document in pdf format.
+#
+## 3. **[TESTING](/testing.md)**
+Testing consists of 6 sections:
+1. **UserStories** 
+2. **Aplication Navigation**
+3. **Accessibility** 
+4. **Responsivenes**
+5. **Browser compatibility** 
+6. **Code Validation**
+7. **Site Performance with Lighthouse**
+Testing details can be found here[here](/testing.md)
+#
+## 4. DEPLOYMENT
+Theree are 4 sections in deployment chapter - (1) hosting on GitHub, Forking GitHUb repo, (2) Forking the repository (3) Running the project Locally and (4) Deploying the application to Heroku.
+
+Working with Github and using Git was needed to host and develop the code in the cloud while Heroku was used to deploy the application to the web. 
+
+### **GITHUB**
+### **(1) Open a new repo:**
+  - Register into own account on GitHub
+  - Press gree Button "new"
+  - On repository template select Code-institute-Org/gitpod-full-template
+  - Next to the "Owner" type "Repository Name"
+  - Select "public" option
+  - Press green button "Create Repository" = ? new repository created based on standard Code Institute template
+  - Press green button "Gitpod" - you will be prompted to cloud based EDI wher you can start editing the application code and README file.
+
+### **(2) Forking the GitHub Repository**
+To fork a repository:
+- go to github page, find repository that you want to fork, enter it
+- press "Fork" button at the top right corner of the repository
+- Now you have a copy that you can work with without impacting it
+More information can be found in gitHud Documentation [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+### **(3) Running this Project Locally** 
+I did not run the project locally, however Anna Greaves explains in detail how to run the project localle with detailed instructions. next Project I will do in VS code. Detailed instruction can be found here: [Running the project Locally](https://github.com/AJGreaves/familyhub/blob/master/README.md#how-to-run-this-project-locally)
+
+### **HEROKU**
+### **(4) Hosting on Heroku**
+In order to deply the app to Heroku you need to go thorugh following steps:
+1. Gitpod - tell heroku which apps and dependencies are required to run an app - create requirments.txt file:
+
+        pip3 freeze --local>requirements.txt   
+2. create Procfile for Heroku (important to have space before python and delete last line space in Procfile - it is very important for connection):
+
+        echo web: python app.py>Procfile
+NOTE: When deployed the file it is very important that procfile contains very precise inforomation, with no spaces or last emplty line otherwise it won't connect to heroku. 
+3. Create new app at heroku profile, app name: ask-pft-meetinghub,
+4. Go to heroku website - open the app frim github,  
+5. Deploy and enable Automatic Deployment, select "main" branch and press deploy. 
+6. After a while - press View - check "hello world"
+7. Go to settings and set up config vars:
+
+      IP: "0.0.0.0"
+      PORT: "5000"
+      SECRET_KEY: (from env.py)
+      MONGO_URI: see the step below
+      MONGO_DBNAME: "ms3"
+8. Hide config vars
+9. Check if requiremets.txt and Procfile was created in repository
+
+        CLI: git status
+10. Push using commit command for each of the 2 files one by one:
+
+        git add requirements.txt     + Enter
+        git commit -m "..."          + Enter
+        git add Procfile             + Enter
+        git commit -m "..."          + Enter
+        git push                     + Enter
+11. Connect Mongo DB to heroku as well:
+12. In CLI: Install flask-pymongo and dus-python to use mongo srv connection string:
+        
+        CLI:
+        pip3 install flask-pymongo
+        pip3 install dns-python
+
+13. Update requirments.txt
+
+        pip3 freeze --local>requirements.txt
+14. in app.py install PyMongo and OjectId form the libraries
+
+        from flask_pymongo import PyMongo
+        from bson.objectid import ObjectId
+
+15. define app configuration in app.py:
+
+        app.config["MONGO_DBNAME"]= os.environ.get("MONGO_DBNAME")
+        app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+        app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+
+16. Creaete URI key: go to MongoDb, select "databases", go to "connect", go to "connect your application", copy the key and replace 3 parameters;
+            
+        "mongodb+srv://askformongodb:password@clustername.eqlwe.mongodb.net/databasename?retryWrites=true&w=majority"
+        where:
+        1. password: XXXXXX
+        2. clustername: your_cluster
+        3. databasename: your_dtb
+You can find more details and sequence of steps on [step by step developemnt process](/sbsdev.md)
+
+#
+## 5. CREDITS
+### **Content**
+  * The conetnt for the application was developed myself based on 15 years of operaational consulting experience and thanks to the team from [Alexandr Proudfoot consulting company](https://proudfoot.com/) - Monique, Kamal, Tim Sebastian who were great partners in brainstorming the wireframes.
+
+### **Media**
+  All the media content was developed by myself in Powerpoint and stored in jpg format
+
+### **Acknowledgements**
+  - Code institute for the backend project Example and all the great videos on Python, Flask and database management. Also for github template - I used for code development.
+  - Chriss Quin for mentorship, good tips and critical advices
+  - Kevin, Miklosh and Johan for great lessons and support during coding problem solving
+  - Special thanks to Anna Greaves - she is a constant source of motivation for me. She is a benchmark of development and perfection. I really get inspired by what she does and how deep she goes when it comes to learning new things.
+  - "Alexandr Proudfoot" consulting company for giving me inspiration assigning me to Digital Results Hub workstream and letting me use one of the 5 modules as a prototype for my project
+  - Stack overflow and bloggers: 
+    - Punit Jajodia and his website [programiz](https://www.programiz.com/python-programming/datetime/current-datetime)
+  - My family - for patience, motivation and energy.
+#
+## 6. DISCLAIMER
+- This project is for educationall purpose only. It is a part of the Code Institute course of Software Development. Module - Python Flask and Backend development.

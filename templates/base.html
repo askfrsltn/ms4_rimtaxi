@@ -34,9 +34,69 @@
         </title>
     </head>
     <body>
-        <header class="container-fluid fixed-top"></header>
+        <header class="container-fluid fixed-top">
+            <div class="row">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <strong>RIM-TAXI</strong>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input type="text" class="form-control border border-secondary rounded-1" name="q" placeholder="Search the tours">
+                            <div class="input-group-append">
+                                <button type="submit" class="form-control btn btn-black rounded-1">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
+            </div>
+        </header>
         {% if messages %}
-            <div class="message-container"></div>
+            <div class="message-container">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inine-item dropdown">
+                        <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="#" class="dropdown-item"> Setup </a>
+                                    <a href="#" class="dropdown-item"> Manage Tours </a>
+                                    <a href="#" class="dropdown-item"> Manage Reviews </a>
+                                {% endif %}
+                                <a href="#" class="dropdown-item"> My Profile </a><a href="#" class="dropdown-item"> Logout </a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inine-item">
+                        <a href="" class="{% if grand_total %}text-info font-weight-bold {% else %} text-black {% endif %} nav-link">
+                            <div class="text-center">
+                                <div>
+                                    <i class="fas fa-route fa-lg"></i>
+                                </div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        € {{ grand-total|floatformat:2 }}
+                                    {% else %}
+                                        € 0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         {% endif %}
         
         {% block page_header %}

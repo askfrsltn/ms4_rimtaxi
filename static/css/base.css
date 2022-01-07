@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/hero2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -28,50 +28,58 @@ body {
 }
 
 .shop-now-button {
+    background: #ffc107;
+    color: black;
     min-width: 260px;
 }
 
-.btn-mycolor {
-    background: black;
-    color: white;
+.btn-black {
+    background: #ffc107;
+    color: black;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-mycolor:hover,
-.btn-mycolor:active,
-.btn-mycolor:focus {
-    background: #ffc107;
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: black;
+    color: rgb(206, 203, 203);
 }
 
-.text-mycolor {
+.text-black {
     color: #000 !important;
 }
 
-.border-mycolor {
+.border-black {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
+/* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
     }
-  }
-  
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
-  }
+
+    .header-container {
+        padding-top: 104px;
+    }
+}

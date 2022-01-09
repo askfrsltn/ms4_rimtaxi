@@ -40,14 +40,17 @@ body {
 
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus,
+.shop-now-button:focus {
+    background: #dc3545;
+    color: rgb(206, 203, 203);
+}
+
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
     background: black;
     color: rgb(206, 203, 203);
 }
-
 .text-black {
     color: #000 !important;
 }

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tour, Theme, City, Car, Review
+from .models import City, Tour, Theme, Car, Review
 
 # Register your models here.
 admin.site.register(City)

@@ -1,0 +1,1 @@
+[{"pk":1,"model":"tours.city","fields":{"name":"rome","friendly_name":"Rome"}},{"pk":2,"model":"tours.city","fields":{"name":"florence","friendly_name":"Florence"}},{"pk":3,"model":"tours.city","fields":{"name":"naples","friendly_name":"Naples"}}]

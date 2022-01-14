@@ -2,24 +2,80 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
+<div class="container h-100 header-container">
+    <div class="row h-100">
         <div class="col">
         </div>
     </div>
 </div>
 {% endblock %}
 {% block content%}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-8 my-auto">
-            <h1 class="display-4 logo-font text-black">
-               Tours:
-            </h1>
-            <div class="my-5 text-white">
-                    {{ tours }}
+    <div class="overlay">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center mt-3">
+                    <h2 class="logo-font">Tours: </h2>
+                    <hr class="w-50 mb-1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="product-container mt-3 col-10 offset-1">
+                    <div class="row mt-1 mb-2">
+                        <div class="row">
+                            {% for tour in tours %}
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="card border-0 h-100">
+                                        {% if tour.tour_image %}
+                                            <a href="">
+                                                <img class="card-img-top img-fluid" src="{{ tour.tour_image.url }}" alt="{{ tour.tour_name }}">
+                                            </a>
+                                        {% else %}
+                                            <a href="">
+                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ tour.tour_friendly_name }}">
+                                            </a>
+                                        {% endif %}
+                                        <div class="card-body pb-0">
+                                            <p class="mb-0">{{ tour.tour_friendly_name }}</p>
+                                        </div>
+                                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="lead mb-0 text-left font-weight-bold text-danger">€{{ tour.tour_price }}</p>
+                                                    {% if tour.tour_ranking %}
+                                                        <small class="text-info"><i class="fas fa-thumbs-up mr-1 text-info"></i>{{ tour.tour_ranking }} / 5.00</small>
+                                                    {% else %}
+                                                        <small class="text-muted">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if forloop.counter|divisibleby:1 %}
+                                <div class="col-12 d-sm-none mb-5">
+                                    <hr>
+                                </div>
+                                {% endif %}                        
+                                {% if forloop.counter|divisibleby:2 %}
+                                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                        <hr>
+                                    </div>
+                                {% endif %}
+                                {% if forloop.counter|divisibleby:3 %}
+                                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                        <hr>
+                                    </div>
+                                {% endif %}
+                                {% if forloop.counter|divisibleby:4 %}
+                                    <div class="col-12 d-none d-xl-block mb-5">
+                                        <hr>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}

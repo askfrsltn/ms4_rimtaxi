@@ -34,7 +34,7 @@ class Car(models.Model):
     car_image_url = models.URLField(max_length=1024, null=True, blank=True)
 
     def __str__(self):
-        return self.car_name
+        return self.car_class
 
     def get_friendly_name(self):
         return self.car_friendly_name

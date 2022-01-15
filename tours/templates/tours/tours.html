@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container h-100 header-container">
-    <div class="row h-100">
+<div class="container header-container">
+    <div class="row">
         <div class="col">
         </div>
     </div>
@@ -24,13 +24,13 @@
                         <div class="row">
                             {% for tour in tours %}
                                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                    <div class="card border-0 h-100">
+                                    <div class="card border-0 rounded-3">
                                         {% if tour.tour_image %}
-                                            <a href="">
+                                            <a href="{% url 'tour_detail' tour.id %}">
                                                 <img class="card-img-top img-fluid" src="{{ tour.tour_image.url }}" alt="{{ tour.tour_name }}">
                                             </a>
                                         {% else %}
-                                            <a href="">
+                                            <a href="{% url 'tour_detail' tour.id %}">
                                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ tour.tour_friendly_name }}">
                                             </a>
                                         {% endif %}
@@ -45,6 +45,26 @@
                                                         <small class="text-info"><i class="fas fa-thumbs-up mr-1 text-info"></i>{{ tour.tour_ranking }} / 5.00</small>
                                                     {% else %}
                                                         <small class="text-muted">No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
+                                                    {% if tour.tour_distance %}
+                                                        <small class="text-dark"><i class="fas fa-road mr-1 text-dark"></i>{{ tour.tour_distance }}</small>
+                                                    {% else %}
+                                                        <small class="text-muted"></small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
+                                                    {% if tour.tour_duration %}
+                                                        <small class="text-dark"><i class="fas fa-clock mr-1 text-dark"></i>{{ tour.tour_duration }}</small>
+                                                    {% else %}
+                                                        <small class="text-muted"></small>
                                                     {% endif %}
                                                 </div>
                                             </div>

@@ -31,3 +31,6 @@ III. Meeting 1 - 19-Jan
 
 ## FEATURES TO IMPLEMENT/CHANGE BACKLOG
 1. Review line at the bottom of the home page
+2. tours page - change image size for each card
+2. tours page - style cards
+2. tours page - make the page scrollable

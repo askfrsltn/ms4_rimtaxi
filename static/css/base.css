@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/hero2.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    /* height: calc(100vh - 164px);*/
     color: #555;
     font-family: 'Lato';
 }
@@ -20,6 +20,7 @@ body {
     z-index: -1;
     padding-top: 164px
 }
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -83,7 +84,7 @@ body {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+@media (min-width: 991px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -93,6 +94,10 @@ body {
     }
 
     .header-container {
-        padding-top: 104px;
+        padding-top: 116px;
+    }
+
+    body {
+        height:calc(100vh-116px)
     }
 }

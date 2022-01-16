@@ -18,6 +18,34 @@
                     <hr class="w-50 mb-1">
                 </div>
             </div>
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-4 offset-md-3 my-auto d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-2">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="tour_price_asc" {% if current_sorting == 'tour_price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="tour_price_desc" {% if current_sorting == 'tour_price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="tour_ranking_asc" {% if current_sorting == 'tour_ranking_asc' %}selected{% endif %}>Ranking (low to high)</option>
+                            <option value="tour_ranking_desc" {% if current_sorting == 'tour_ranking_desc' %}selected{% endif %}>Ranking (high to low)</option>
+                            <option value="tour_distance_asc" {% if current_sorting == 'tour_distance_asc' %}selected{% endif %}>Distance (low to high)</option>
+                            <option value="tour_disctance_desc" {% if current_sorting == 'tour_distance_desc' %}selected{% endif %}>Distance (high to low)</option>
+                            <option value="tour_duration_asc" {% if current_sorting == 'tour_duration_asc' %}selected{% endif %}>Duration (low to high)</option>
+                            <option value="tour_duration_desc" {% if current_sorting == 'tour_duration_desc' %}selected{% endif %}>Duration (high to low)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-md-first">
+                <p class="text-muted mt-3 text-center text-md-left">
+                    {% if search_term or current_theme or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'tours' %}"> Back to tours page </a> | </span>
+                    {% endif %}
+                    {{ tours|length }} tours found 
+                    {% if search_term %} from your search 
+                        <strong>"{{ search_term }}"</strong>
+                    {% endif %}
+                </p>
+            </div>
             <div class="row">
                 <div class="product-container mt-3 col-10 offset-1">
                     <div class="row mt-1 mb-2">

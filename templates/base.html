@@ -63,8 +63,8 @@
                         <li class="list-inline-item dropdown">
                             <a href="#" class="text-dark nav-link" id="user-options" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                                 <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
+                                    <div><i class="fas fa-laptop fa-lg"></i></div>
+                                    <p class="my-0">My Desk</p>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -79,7 +79,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link">
+                            <a href="{% url 'view_trip' %}" class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link">
                                 <div class="text-center">
                                     <div>
                                         <i class="fas fa-route fa-lg"></i>

@@ -5,10 +5,8 @@
                 All Tours
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item ">By City</a>
-                <a href="" class="dropdown-item">By Theme</a>
                 <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
+                <a href="" class="dropdown-item ">By Ranking</a>
                 <a href="{% url 'tours' %}" class="dropdown-item ">All Tours</a>
             </div>
         </li>
@@ -18,9 +16,9 @@
                 By City
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Rome</a>
-                <a href="" class="dropdown-item">Florence</a>
-                <a href="" class="dropdown-item">Multicity</a>
+                <a href="{% url 'tours' %}?city=rome" class="dropdown-item">Rome</a>
+                <a href="{% url 'tours' %}?city=florence" class="dropdown-item">Florence</a>
+                <a href="{% url 'tours' %}?city=naples" class="dropdown-item">Naples</a>
             </div>
         </li>
 
@@ -29,24 +27,24 @@
                 By Theme
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Ancient</a>
-                <a href="" class="dropdown-item">Art</a>
-                <a href="" class="dropdown-item">Churches</a>
-                <a href="" class="dropdown-item">Food & Wine</a>
-                <a href="" class="dropdown-item">Shopping</a>
-                <a href="" class="dropdown-item">Active</a>
-                <a href="" class="dropdown-item">For Kids</a>
+                <a href="{% url 'tours' %}?theme=ancient" class="dropdown-item">Ancient</a>
+                <a href="{% url 'tours' %}?theme=art" class="dropdown-item">Art</a>
+                <a href="{% url 'tours' %}?theme=churches" class="dropdown-item">Churches</a>
+                <a href="{% url 'tours' %}?theme=food" class="dropdown-item">Food & Wine</a>
+                <a href="{% url 'tours' %}?theme=shopping" class="dropdown-item">Shopping</a>
+                <a href="{% url 'tours' %}?theme=active" class="dropdown-item">Active</a>
+                <a href="{% url 'tours' %}?theme=kids" class="dropdown-item">Kids</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-danger" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-danger" href="" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Exclusive</a>
-                <a href="" class="dropdown-item">Summer sale</a>
-                <a href="" class="dropdown-item">Winter sale</a>
+                <a href="{% url 'tours' %}?specialoffer=exclusive" class="dropdown-item">Exclusive</a>
+                <a href="{% url 'tours' %}?specialoffer=summer" class="dropdown-item">Summer sale</a>
+                <a href="{% url 'tours' %}?specialoffer=winter" class="dropdown-item">Winter sale</a>
             </div>
         </li>
     </ul>

@@ -24,7 +24,7 @@
                         <div class="row">
                             {% for tour in tours %}
                                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                    <div class="card border-0 rounded-3">
+                                    <div class="card border-0 rounded">
                                         {% if tour.tour_image %}
                                             <a href="{% url 'tour_detail' tour.id %}">
                                                 <img class="card-img-top img-fluid" src="{{ tour.tour_image.url }}" alt="{{ tour.tour_name }}">
@@ -63,6 +63,26 @@
                                                     <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
                                                     {% if tour.tour_duration %}
                                                         <small class="text-dark"><i class="fas fa-clock mr-1 text-dark"></i>{{ tour.tour_duration }}</small>
+                                                    {% else %}
+                                                        <small class="text-muted"></small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
+                                                    {% if tour.tour_city %}
+                                                        <small class="text-dark"><i class="fas fa-university mr-1 text-dark"></i>{{ tour.tour_city }}</small>
+                                                    {% else %}
+                                                        <small class="text-muted"></small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
+                                                    {% if tour.tour_theme %}
+                                                        <small class="text-dark"><i class="fas fa-pen mr-1 text-dark"></i>{{ tour.tour_theme }}</small>
                                                     {% else %}
                                                         <small class="text-muted"></small>
                                                     {% endif %}

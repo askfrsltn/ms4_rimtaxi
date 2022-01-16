@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/hero2.jpg') no-repeat center center fixed;
     background-size: cover;
-    /*height: calc(100vh - 164px);*/
+    height: 100vh;
     color: #555;
     font-family: 'Lato';
 }
@@ -17,12 +17,10 @@ body {
     left: 0;
     position: fixed;
     background: #F1F1F3;
-    z-index: -1;
+    z-index: 1;
     padding-top: 164px
 }
-.overlay .container-fluid {
-    z-index: 1;
-}
+
 /* from Bulma */
 .icon {
     align-items: center;

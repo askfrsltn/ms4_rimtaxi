@@ -30,7 +30,6 @@ def all_tours(request):
                     sortkey = f'-{sortkey}'
             tours = tours.order_by(sortkey)
 
-        
         # query tours by theme
         if 'theme' in request.GET:
             themes = request.GET['theme']
@@ -59,7 +58,7 @@ def all_tours(request):
                 Q(tour_description__icontains=query)
             tours = tours.filter(queries)
 
-    current_sorting=f'{sort}_{direction}'
+    current_sorting = f'{sort}_{direction}'
     context = {
         'tours': tours,
         'search_term': query,

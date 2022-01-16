@@ -28,7 +28,7 @@
                             <option value="tour_ranking_asc" {% if current_sorting == 'tour_ranking_asc' %}selected{% endif %}>Ranking (low to high)</option>
                             <option value="tour_ranking_desc" {% if current_sorting == 'tour_ranking_desc' %}selected{% endif %}>Ranking (high to low)</option>
                             <option value="tour_distance_asc" {% if current_sorting == 'tour_distance_asc' %}selected{% endif %}>Distance (low to high)</option>
-                            <option value="tour_disctance_desc" {% if current_sorting == 'tour_distance_desc' %}selected{% endif %}>Distance (high to low)</option>
+                            <option value="tour_distance_desc" {% if current_sorting == 'tour_distance_desc' %}selected{% endif %}>Distance (high to low)</option>
                             <option value="tour_duration_asc" {% if current_sorting == 'tour_duration_asc' %}selected{% endif %}>Duration (low to high)</option>
                             <option value="tour_duration_desc" {% if current_sorting == 'tour_duration_desc' %}selected{% endif %}>Duration (high to low)</option>
                         </select>
@@ -145,5 +145,32 @@
                 </div>
             </div>
         </div>
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
     
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            /* adjusted javascript to meet the criterea for selected value */
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0]+"_"+selectedVal.split("_")[1];
+                var direction = selectedVal.split("_")[2];
+                console.log(sort, direction)
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

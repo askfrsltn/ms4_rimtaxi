@@ -52,7 +52,7 @@
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
                                     {% if tour.tour_distance %}
-                                        <small class="text-dark"><i class="fas fa-road mr-1 text-dark"></i>{{ tour.tour_distance }}</small>
+                                        <small class="text-dark"><i class="fas fa-road mr-1 text-dark"></i>{{ tour.tour_distance }} km</small>
                                     {% else %}
                                         <small class="text-muted"></small>
                                     {% endif %}
@@ -62,7 +62,7 @@
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold text-danger"></p>
                                     {% if tour.tour_duration %}
-                                        <small class="text-dark"><i class="fas fa-clock mr-1 text-dark"></i>{{ tour.tour_duration }}</small>
+                                        <small class="text-dark"><i class="fas fa-clock mr-1 text-dark"></i>{{ tour.tour_duration }} hrs</small>
                                     {% else %}
                                         <small class="text-muted"></small>
                                     {% endif %}

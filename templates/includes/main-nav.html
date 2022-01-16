@@ -7,6 +7,8 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'tours' %}?sort=tour_price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'tours' %}?sort=tour_ranking&direction=desc" class="dropdown-item ">By Ranking</a>
+                <a href="{% url 'tours' %}?sort=tour_distance&direction=asc" class="dropdown-item ">By Distance</a>
+                <a href="{% url 'tours' %}?sort=tour_duration&direction=asc" class="dropdown-item ">By Duration</a>
                 <a href="{% url 'tours' %}" class="dropdown-item ">All Tours</a>
             </div>
         </li>

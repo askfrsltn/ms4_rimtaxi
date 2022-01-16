@@ -45,8 +45,8 @@ class Tour(models.Model):
     tour_friendly_name = models.CharField(max_length=254)
     tour_description = models.TextField()
     tour_price = models.DecimalField(max_digits=5, decimal_places=2)
-    tour_distance = models.CharField(max_length=7)
-    tour_duration = models.CharField(max_length=7)
+    tour_distance = models.DecimalField(max_digits=3, decimal_places=0)
+    tour_duration = models.DecimalField(max_digits=3, decimal_places=0)
     tour_theme = models.ForeignKey(
         'Theme', null=True, blank=True, on_delete=models.SET_NULL)
     tour_city = models.ForeignKey(

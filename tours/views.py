@@ -73,7 +73,6 @@ def tour_detail(request, tour_id):
     tour = get_object_or_404(Tour, pk=tour_id)
     reviews = Review.objects.all()
     tour_reviews = reviews.filter(review_tour_id=tour_id)
-    print(tour_reviews)
 
     context = {
         'tour': tour,

@@ -18,13 +18,6 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-6 order-md-first offset-3">
-                <p class="text-muted mt-3 text-center text-md-center">
-                    <span class="small"><a href="{% url 'tours' %}"> Back to tours page </a>
-                </p>
-            </div>
-        </div>
         <div class="card col-12 col-md-8 offset-2 rounded-3">
             <div class="row">
                 <div class="col text-center mt-3">
@@ -50,29 +43,35 @@
                     <p>
                         <strong>Select your preferences:</strong>
                     </p>
-                    <form method="POST" action="">
+                    <form method="POST" action="{% url 'add_to_trip' tour.id %}">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-4 my-2">
                                 <strong>Passengers:</strong>
                             </div>
                             <div class="col-6 my-2">
-                                <input class="form-control" type="number">
+                                <input class="form-control" name="pax" value="1" max="10" data-trip_id="{{ tour.id }}" id = "id_pax_{{ tour.id }}" type="number">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4 my-2">
-                                <strong>Car type:</strong>
+                                <strong>Car class:</strong>
                             </div>
                             <div class="col-6 my-2">
-                                <input class="form-control" type="select">
+                                <select name="car_class" class="form-control form-select-lg mb-2" aria-label="select car">
+                                    <option selected>Select Car class</option>
+                                    <option value="lux">lux</option>
+                                    <option value="comfort">comfort</option>
+                                    <option value="vip">vip</option>
+                                  </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4 my-2">
-                                <strong>Date and Time:</strong>
+                                <strong>Departure Date:</strong>
                             </div>
                             <div class="col-6 my-2">
-                                <input class="form-control" data-provide="datepicker" type="date">
+                                <input name="departure_date" value="default" class="form-control" data-provide="datepicker" type="date">
                             </div>
                         </div>
                         <div class="row">
@@ -80,10 +79,26 @@
                                 <strong>Departure address:</strong>
                             </div>
                             <div class="col-6 my-2">
-                                <input class="form-control rounded" type="text">
+                                <input name="departure_address" class="form-control rounded" type="text">
                             </div>
                         </div>
-                    </form>   
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <!--Buttons-->
+                        <div class="d-grid gap-1 row mx-auto">
+                            <div class="col-5">
+                                <a href="{% url 'tours' %}" class="col btn btn-lg btn-outline-danger">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span>Search tours</span>
+                                </a>
+                            </div>
+                            <div class="col-5">
+                                <input type="submit" class="btn shop-now-button btn-lg col" value="Add to trip">
+                            </div>
+                        </div>  
+                    </form>
+                    <hr>
                 </div>
             </div>
             <!--Second Row of 3-->
@@ -138,14 +153,7 @@
                             <p class="lead mb-0 text-left font-weight-bold text-danger">Price: €{{ tour.tour_price }}</p>
                         </div>
                     </div>
-                </div>
-                <!--Buy button-->
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <a class="btn btn-lg btn-outline-danger offset-3" type="button" href="">Add the tour to trip
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                    
-                  </div>
+                </div> 
             </div>
             <!--Third Row of 3-->
             <div class="row">

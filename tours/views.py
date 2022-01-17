@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Tour, City, Theme
+from .models import Tour, City, Theme, Review
 from django.contrib import messages
 from django.db.models import Q
 
@@ -70,11 +70,13 @@ def all_tours(request):
 
 
 def tour_detail(request, tour_id):
-
     tour = get_object_or_404(Tour, pk=tour_id)
-
+    reviews = Review.objects.all()
+    tour_reviews = reviews.filter(review_tour_id=tour_id)
+    print(tour_reviews)
+    
     context = {
         'tour': tour,
+        'tour_reviews': tour_reviews,
     }
-
     return render(request, 'tours/tour_detail.html', context)

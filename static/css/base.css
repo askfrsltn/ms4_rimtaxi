@@ -55,6 +55,14 @@ body {
     background: #dc3545;
     color: rgb(206, 203, 203);
 }
+.bg-review{
+    background-color: #ced4da;
+    opacity: 75%;
+}
+
+.text-italic{
+    font-style: italic;
+}
 
 .btn-black:hover,
 .btn-black:active,

@@ -35,6 +35,16 @@
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ tour.tour_friendly_name }}">
                             </a>
                         {% endif %}
+                        <div class="col text-center mt-3">
+                            <p class=""> Reviews:  </p>
+                                {% for item in tour_reviews %}
+                                
+                                <p class="p-2 bg-review rounded border-1 text-italic">
+                                    <i class="fas fa-quote-right "></i> 
+                                    {{ item }} 
+                                    <i class="fas fa-quote-left"></i> </p>
+                                {% endfor %}
+                        </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="products-detail-container mb-5 mt-md-5">

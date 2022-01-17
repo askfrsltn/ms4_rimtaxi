@@ -66,14 +66,14 @@ class Tour(models.Model):
 class Review(models.Model):
     '''change to models.DateField(auto_now=True,
     auto_now_add=False) after intial download'''
-    review_date = models.CharField(max_length=24)
+    review_date = models.DateField(auto_now=False, auto_now_add=False)
     review_order_id = models.CharField(max_length=6)
-    review_order_date = models.CharField(max_length=24)
+    review_order_date = models.DateField(auto_now=False, auto_now_add=False)
     review_customer_id = models.CharField(max_length=84)
     review_tour_id = models.ForeignKey(
         'Tour', null=True, blank=True, on_delete=models.SET_NULL)
-    review_ranking = models.DecimalField(max_digits=2, decimal_places=2)
+    review_ranking = models.DecimalField(max_digits=3, decimal_places=2)
     review_text = models.TextField()
 
     def __str__(self):
-        return self.review_order_id
+        return self.review_text

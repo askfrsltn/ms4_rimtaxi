@@ -35,8 +35,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 order-md-first">
-                <p class="text-muted mt-3 text-center text-md-left">
+            <div class="col-12 col-md-6 order-md-first offset-3">
+                <p class="text-muted mt-3 text-center text-md-center">
                     {% if search_term or current_theme or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'tours' %}"> Back to tours page </a> | </span>
                     {% endif %}
@@ -52,7 +52,7 @@
                         <div class="row">
                             {% for tour in tours %}
                                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                    <div class="card border-0 rounded">
+                                    <div class="card h-100 border-0 rounded">
                                         {% if tour.tour_image %}
                                             <a href="{% url 'tour_detail' tour.id %}">
                                                 <img class="card-img-top img-fluid" src="{{ tour.tour_image.url }}" alt="{{ tour.tour_name }}">
@@ -63,7 +63,7 @@
                                             </a>
                                         {% endif %}
                                         <div class="card-body pb-0">
-                                            <p class="mb-0">{{ tour.tour_friendly_name }}</p>
+                                            <strong><p class="mb-0">{{ tour.tour_friendly_name }}</p></strong>
                                         </div>
                                         <div class="card-footer bg-white pt-0 border-0 text-left">
                                             <div class="row">
